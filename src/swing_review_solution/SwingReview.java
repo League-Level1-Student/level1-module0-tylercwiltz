@@ -26,6 +26,8 @@ public class SwingReview implements ActionListener, KeyListener{
 	JButton button1;
 	JButton button2;
 	
+	int numClicks = 0;
+	
 	public void run() {
 
 		// 1. Initialize an object of the JFrame class
@@ -49,25 +51,25 @@ public class SwingReview implements ActionListener, KeyListener{
 		panel.add(label);
 		// 10. Pack your JFrame.
 		frame.pack();
-		// 11. Run your program again. Do you see your message.
+		// 11. Run your program again. Do you see your message?
 		
 		// 12. Use the loadImage method to set the icon of the JLabel object.
 		label.setIcon(loadImage());
-		// 13. Re-pack the JFrame object.
+		// 13. Re-pack the JFrame
 		frame.pack();
-		// 14. Run the program one more time. Do you see the image?
+		// 14. Run your program again. Do you see the image?
 		
 		// 15. Initialize an object of the JButton class
 		button1 = new JButton();
 		// 16. Add the JButton object to the JPanel
 		panel.add(button1);
-		// 17. Pack your JFrame
+		// 17. Re-pack your JFrame
 		frame.pack();
 		// 18. Add an action listener to the button
 		button1.addActionListener(this);
 		// 19. Set the text of your button to "Click Me"
 		button1.setText("Click Me");
-		// 20. Pack your JFrame
+		// 20. Re-pack your JFrame
 		frame.pack();
 		// 21. Add a second JButton and action listener to the button
 		button2 = new JButton();
@@ -79,7 +81,7 @@ public class SwingReview implements ActionListener, KeyListener{
 		// 23. Uncomment the 2 lines below (Ignore what they do for now)
 		button1.setFocusable(false);
 		button2.setFocusable(false);
-		// 28. Add a key listener to the frame
+		// 29. Add a key listener to the frame
 		frame.addKeyListener(this);
 	}
 
@@ -102,19 +104,25 @@ public class SwingReview implements ActionListener, KeyListener{
 		  // 26. If the "Click Me" button was clicked use JOptionPane pop-up to say "Good Choice"
 		  if( buttonClicked == button1 ) {
 				JOptionPane.showMessageDialog(null, "Good Choice");
+				numClicks++;
 		  }
-		  // 27. If the "No, Click Me button was clicked say "A Better Choice"
+		  // 27. If the "No, Click Me" button was clicked say "A Better Choice"
 		  else {
 			  JOptionPane.showMessageDialog(null, "A Better Choice");
+		  }
+		  // 28. If the "Click Me" button is clicked 3 times change the text of the button to say "Stop Clicking Me"
+		  if(numClicks == 3 ) {
+			  button1.setText("Stop Clicking Me");
+			  frame.pack();
 		  }
 	}
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// 29. Save the key typed by the user to a variable
+		// 30. Save the key typed by the user to a variable
 		// HINT: Look at the methods that KeyEvent e has
 		char kt = e.getKeyChar();
-		// 30. Use JOptionPane pop-up to tell the user which key they typed 
+		// 31. Use JOptionPane pop-up to tell the user which key they typed 
 		JOptionPane.showMessageDialog(null, kt);
 	}
 

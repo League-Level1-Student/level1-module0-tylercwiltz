@@ -49,13 +49,13 @@ public class SwingReview implements ActionListener, KeyListener{
 			
 			// 10. Pack your JFrame.
 			
-			// 11. Run your program again. Do you see your message.
+			// 11. Run your program again. Do you see your message?
 			
 			// 12. Use the loadImage method to set the icon of the JLabel object.
 			
 			// 13. Re-pack the JFrame object.
 			
-			// 14. Run the program one more time. Do you see the image?
+			// 14. Run your program again. Do you see the image?
 			
 			// 15. Initialize an object of the JButton class
 			
@@ -79,7 +79,7 @@ public class SwingReview implements ActionListener, KeyListener{
 			//button1.setFocusable(false);
 			//button2.setFocusable(false);
 			
-			// 28. Add a key listener to the frame
+			// 29. Add a key listener to the frame
 			
 		}
 
@@ -102,15 +102,17 @@ public class SwingReview implements ActionListener, KeyListener{
 			  // 26. If the "Click Me" button was clicked use JOptionPane pop-up to say "Good Choice"
 			 
 			  // 27. If the "No, Click Me button was clicked say "A Better Choice"
+			
+			  // 28. If the "Click Me" button is clicked 3 times change the text of the button to say "Stop Clicking Me"
 			 
 		}
 
 		@Override
 		public void keyTyped(KeyEvent e) {
-			// 29. Save the key typed by the user to a variable
+			// 30. Save the key typed by the user to a variable
 			// HINT: Look at the methods that KeyEvent e has
 			
-			// 30. Use JOptionPane pop-up to tell the user which key they typed 
+			// 31. Use JOptionPane pop-up to tell the user which key they typed 
 			
 		}
 
