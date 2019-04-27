@@ -1,4 +1,4 @@
-package my_first_swing_gui;
+package swing_review_solution;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
@@ -18,7 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class MyFirstSwingGUI implements ActionListener, KeyListener{
+public class SwingReview implements ActionListener, KeyListener{
 	//Creates necessary Swing components to use for this program
 	JFrame frame;
 	JPanel panel;
@@ -76,17 +76,16 @@ public class MyFirstSwingGUI implements ActionListener, KeyListener{
 		// 22. Set the text of your button to "No, Click Me"
 		button2.setText("No, Click Me");
 		frame.pack();
-		// 27. Add a key listener to the frame
-		frame.addKeyListener(this);
-		
-		//Ignore these 2 lines below for now
+		// 23. Uncomment the 2 lines below (Ignore what they do for now)
 		button1.setFocusable(false);
 		button2.setFocusable(false);
+		// 28. Add a key listener to the frame
+		frame.addKeyListener(this);
 	}
 
 	public ImageIcon loadImage() {
 		try {
-			return new ImageIcon(ImageIO.read(new MyFirstSwingGUI().getClass().getResourceAsStream("java.png")));
+			return new ImageIcon(ImageIO.read(new SwingReview().getClass().getResourceAsStream("java.png")));
 		} catch (IOException e) {
 
 			return null;
@@ -95,16 +94,16 @@ public class MyFirstSwingGUI implements ActionListener, KeyListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// 23. Uncomment the 2 lines below
+		// 24. Uncomment the 2 lines below
 		 JButton buttonClicked = (JButton)e.getSource();
 		 System.out.println(buttonClicked.getText());
 		
-		// 24. Check which button was clicked (HINT: look back at step 23 
-		  // 25. If the "Click Me" button was clicked use JOptionPane pop-up to say "Good Choice"
+		// 25. Check which button was clicked (HINT: look back at step 24) 
+		  // 26. If the "Click Me" button was clicked use JOptionPane pop-up to say "Good Choice"
 		  if( buttonClicked.getText() == "Click Me" ) {
 			  JOptionPane.showMessageDialog(null, "Good Choice");
 		  }
-		  // 26. If the "No, Click Me button was clicked say "A Better Choice"
+		  // 27. If the "No, Click Me button was clicked say "A Better Choice"
 		  else {
 			  JOptionPane.showMessageDialog(null, "A Better Choice");
 		  }
@@ -112,10 +111,10 @@ public class MyFirstSwingGUI implements ActionListener, KeyListener{
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// 28. Save the key typed by the user to a variable
+		// 29. Save the key typed by the user to a variable
 		// HINT: Look at the methods that KeyEvent e has
 		char kt = e.getKeyChar();
-		// 29. Use JOptionPane pop-up to tell the user which key they typed 
+		// 30. Use JOptionPane pop-up to tell the user which key they typed 
 		JOptionPane.showMessageDialog(null, kt);
 	}
 

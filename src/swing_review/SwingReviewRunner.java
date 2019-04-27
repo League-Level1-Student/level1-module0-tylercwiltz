@@ -1,11 +1,11 @@
-package my_first_swing_gui;
+package swing_review;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
- *    Level 1
+ *    Level 2
  */
 
-public class MyFirstSwingGUIRunner {
+public class SwingReviewRunner {
 	public static void main(String[] args) {
-		new MyFirstSwingGUI().run();
+		new SwingReview().run();
 	}
 }
