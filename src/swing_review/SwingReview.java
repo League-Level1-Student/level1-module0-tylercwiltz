@@ -98,7 +98,7 @@ public class SwingReview implements ActionListener, KeyListener{
 			// JButton buttonClicked = (JButton)e.getSource();
 			// System.out.println(buttonClicked.getText());
 			
-			// 25. Check which button was clicked (HINT: look back at step 24) 
+			// 25. Check which button was clicked
 			  // 26. If the "Click Me" button was clicked use JOptionPane pop-up to say "Good Choice"
 			 
 			  // 27. If the "No, Click Me button was clicked say "A Better Choice"
