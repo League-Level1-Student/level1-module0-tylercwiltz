@@ -5,7 +5,7 @@ package swing_review_solution;
  */
 
 public class SwingReviewRunner {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		new SwingReview().run();
 	}
 }

@@ -4,13 +4,17 @@ package swing_review_solution;
  *    Level 1
  */
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -28,7 +32,7 @@ public class SwingReview implements ActionListener, KeyListener{
 	
 	int numClicks = 0;
 	
-	public void run() {
+	public void run() throws Exception {
 
 		// 1. Initialize an object of the JFrame class
 		frame = new JFrame();
@@ -54,7 +58,7 @@ public class SwingReview implements ActionListener, KeyListener{
 		// 11. Run your program again. Do you see your message?
 		
 		// 12. Use the loadImage method to set the icon of the JLabel object.
-		label.setIcon(loadImage());
+		label.setIcon(loadImage("https://s3-media2.fl.yelpcdn.com/bphoto/wdWlrEA0UMXDlmXS8mC0cw/o.jpg"));
 		// 13. Re-pack the JFrame
 		frame.pack();
 		// 14. Run your program again. Do you see the image?
@@ -85,13 +89,9 @@ public class SwingReview implements ActionListener, KeyListener{
 		frame.addKeyListener(this);
 	}
 
-	public ImageIcon loadImage() {
-		try {
-			return new ImageIcon(ImageIO.read(new SwingReview().getClass().getResourceAsStream("java.png")));
-		} catch (IOException e) {
-
-			return null;
-		}
+	private ImageIcon loadImage(String imageUrl) throws MalformedURLException {
+		URL url = new URL(imageUrl);
+		return  new ImageIcon(url);
 	}
 
 	@Override
