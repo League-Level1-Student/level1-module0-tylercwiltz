@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -26,7 +28,7 @@ public class SwingReview implements ActionListener, KeyListener{
 		JButton button1;
 		JButton button2;
 		
-		public void run() {
+		public void run() throws Exception {
 
 			// 1. Initialize an object of the JFrame class
 			
@@ -83,13 +85,9 @@ public class SwingReview implements ActionListener, KeyListener{
 			
 		}
 
-		public ImageIcon loadImage() {
-			try {
-				return new ImageIcon(ImageIO.read(new SwingReview().getClass().getResourceAsStream("java.png")));
-			} catch (IOException e) {
-
-				return null;
-			}
+		private ImageIcon loadImage(String imageUrl) throws MalformedURLException {
+			URL url = new URL(imageUrl);
+			return  new ImageIcon(url);
 		}
 		
 		@Override

@@ -1,7 +1,7 @@
 package swing_review_solution;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
- *    Level 1
+ *    Level 2
  */
 
 public class SwingReviewRunner {
